@@ -1,0 +1,11 @@
+name: Always Fail Action
+
+on: [push, pull_request]
+
+jobs:
+  fail:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail Step
+        run: |
+          exit 1
