@@ -1,10 +1,11 @@
-name: Fail Any PR Activity
+name: Always Fail Action
 
-on: pull_request
+on: [push, pull_request]
 
 jobs:
-  fail_job:
+  fail:
     runs-on: ubuntu-latest
     steps:
-      - name: Guaranteed Failure
-        run: exit 1
+      - name: Fail Step
+        run: |
+          exit 1
