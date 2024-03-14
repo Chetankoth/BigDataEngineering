@@ -1,0 +1,10 @@
+name: Fail Any PR Activity
+
+on: pull_request
+
+jobs:
+  fail_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Guaranteed Failure
+        run: exit 1
